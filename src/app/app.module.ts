@@ -8,6 +8,7 @@ import { PieChartComponent } from './pie-chart.component';
 import { BarChartComponent } from './bar-chart.component';
 import { ChartComponent } from './chart.component';
 import { ListComponent } from './list.component';
+import { LineChartComponent } from './line-chart.component'
 import { DataService } from './services/data.service';
 import 'hammerjs';
 
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
     ChartComponent,
     BarChartComponent,
     PieChartComponent,
+    LineChartComponent,
     ListComponent
   ],
   imports: [

@@ -1,4 +1,4 @@
-<kendo-chart [seriesColors]="['green', 'red']" (seriesClick)="onSeriesClick($event)">
+<kendo-chart [seriesColors]="['green', 'red']" [pannable]="true" [zoomable]="true" [categoryAxis]="categoryAxis" (seriesClick)="onSeriesClick($event)">
     <kendo-chart-title text="Gain / Loss"></kendo-chart-title>
     <kendo-chart-series>
             <kendo-chart-series-item

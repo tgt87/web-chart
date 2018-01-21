@@ -17,21 +17,36 @@ interface Sample {
 })
 export class BarChartComponent {
     public data: Sample[] = [{
-        time: '7 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 7 pm'
+        time: '1 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 1 pm'
     }, {
-        time: '8 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 8 pm'
+        time: '2 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 2 pm'
     }, {
-        time: '9 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 9 pm'
+        time: '3 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 3 pm'
     }, {
-        time: '7 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 7 pm'
+        time: '4 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 4 pm'
     }, {
-        time: '8 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 8 pm'
+        time: '5 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 5 pm'
     }, {
-        time: '9 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 9 pm'
-    }];
+        time: '6 pm', type: 'Gain', value: this.getRandomInt(), category: 'Gain at 6 pm'
+    }, {
+        time: '1 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 1 pm'
+    }, {
+        time: '2 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 2 pm'
+    }, {
+        time: '3 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 3 pm'
+    }, {
+        time: '4 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 4 pm'
+    }, {
+        time: '5 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 5 pm'
+    }, {
+        time: '6 pm', type: 'Loss', value: this.getRandomInt(), category: 'Loss at 6 pm'
+    }
+];
 
     public series: Sample[] | GroupResult[];
-
+    public categoryAxis: any = {
+        max: 3
+    };
     constructor(private dataService: DataService, private router: Router) {
         this.series = groupBy(this.data, [{ field: "type" }]);
     }
