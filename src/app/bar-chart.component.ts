@@ -37,7 +37,7 @@ export class BarChartComponent {
     }
 
   onSeriesClick(data){
-    console.log(Object.getPrototypeOf(data.dataItem));
+    // console.log(Object.getPrototypeOf(data.dataItem));
     this.dataService.setData(Object.getPrototypeOf(data.dataItem));
     this.router.navigateByUrl('/listings');
   }

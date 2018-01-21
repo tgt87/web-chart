@@ -6,12 +6,14 @@ import { DataService } from './services/data.service';
 @Component({
   selector: 'list',
   template: `
+        <div (swiperight)="swipe($event.type)">
             <h1>{{title}}</h1>
             <ul>
                 <li *ngFor="let fruit of fruitList">{{fruit}}</li>
             </ul>
             <br>
             <button (click)="back()">Back to charts</button>
+        </div>    
   `
 })
 export class ListComponent {
@@ -23,5 +25,11 @@ export class ListComponent {
 
     back(){
         this.location.back();
+    }
+
+    swipe(action){
+        if(action === 'swiperight'){
+            this.location.back();
+        }
     }
 }
